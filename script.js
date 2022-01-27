@@ -23,10 +23,20 @@ document.getElementById('add-row').addEventListener('click', function () {
 // document.querySelector('#table td').style.backgroundColor = 'red';
 
 // });
-function changeBackground(color) {
-  let row = document.createElement("tr");
-  let td = document.createElement("td");
-  document.getElementById('#table td').style.background = color;
-}
 
-document.getElementById('td').addEventListener("click",function() { changeBackground('red') });
+// function changeBackground(color) {
+//   let row = document.createElement("tr");
+//   let td = document.createElement("td");
+//   document.getElementById('#table td').style.background = color;
+// }
+
+// document.getElementById('td').addEventListener("click",function() { changeBackground('red') });
+
+function changeColor(event) {
+    const el = e.target;
+    el.setAttribute('style', 'color: blue');
+  }
+  
+  document.getElementById('table').addEventListener("click",function(e) { 
+    changeColor(backgroundColor, red)
+    });
