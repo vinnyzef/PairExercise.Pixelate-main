@@ -1,4 +1,5 @@
 const tab = document.getElementById('table');
+let currColor = 'red';
 
 
 function makeRow() {
@@ -19,24 +20,15 @@ document.getElementById('add-row').addEventListener('click', function () {
 });
 
 
-// document.querySelector('#table td').addEventListener('click', function () {
-// document.querySelector('#table td').style.backgroundColor = 'red';
+document.getElementById('table').addEventListener('click', function (e) {
 
-// });
+let cell = e.target.closest('td');
 
-// function changeBackground(color) {
-//   let row = document.createElement("tr");
-//   let td = document.createElement("td");
-//   document.getElementById('#table td').style.background = color;
-// }
+cell.style.backgroundColor = currColor;
+});
 
-// document.getElementById('td').addEventListener("click",function() { changeBackground('red') });
 
-function changeColor(event) {
-    const el = e.target;
-    el.setAttribute('style', 'color: blue');
-  }
-  
-  document.getElementById('table').addEventListener("click",function(e) { 
-    changeColor(backgroundColor, red)
-    });
+document.getElementById('select').addEventListener('change', function(e){
+currColor = e.target.value;
+
+});
